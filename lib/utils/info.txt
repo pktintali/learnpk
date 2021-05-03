@@ -1,0 +1,32 @@
+Short Codes and Their Meaning
+#>h1.This is example text.#red
+
+#>Break elements into parts
+First three words after #> is the tag code(ie:h1.)
+Last words after .# is color code
+
+HTML Widget Codes:
+
+h1. => for h1 heading
+h2. => for h2 heading
+h3. => for h3 heading
+h4. => for h4 heading
+h5. => for h5 heading
+p0. => for paragraph
+cb. => bullet point with green checkbox
+ob. => bullet point with circle
+im. => for image
+hr. => for Horizontal Line
+s0. => for single line space
+t0. => for table header
+tx. => for table rows
+
+Color Codes:
+.#red for red
+.#green for green
+.#blue for blue
+.#yellow for yellow
+.#purple for purple
+
+Note:
+Saperate table rows parts by | symbol
