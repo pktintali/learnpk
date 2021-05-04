@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pro_learning/pages/home_page.dart';
 import 'package:pro_learning/providers/settings.dart';
 import 'package:provider/provider.dart';
-
 void main() => runApp(
       MultiProvider(
         providers: [

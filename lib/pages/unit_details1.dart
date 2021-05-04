@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro_learning/pages/topic_details.dart';
-import 'package:pro_learning/providers/settings.dart';
 import 'package:pro_learning/utils/networking.dart';
 import 'package:pro_learning/values/strings.dart';
-import 'package:provider/provider.dart';
 
 class UnitDetails extends StatelessWidget {
   final String sub;
@@ -57,9 +55,7 @@ class UnitDetails extends StatelessWidget {
                         //     .clear();
                         // Provider.of<Settings>(context, listen: false)
                         //     .generateWidgets(snapshot.data[index + 1][2]);
-                        double mdq = MediaQuery.of(context).size.width;
-                        Provider.of<Settings>(context,listen: false).fontSize =
-                            mdq > 700 ? 20 : 16;
+
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -128,6 +124,17 @@ class UnitDetails extends StatelessWidget {
           res1: snapshot.data[index + 1][3],
           res2: snapshot.data[index + 1][4],
           res3: snapshot.data[index + 1][5],
+        );
+      case 7:
+        return TopicDetails(
+          unit: unit,
+          topic: snapshot.data[index + 1][0],
+          img: snapshot.data[index + 1][1],
+          body: snapshot.data[index + 1][2],
+          res1: snapshot.data[index + 1][3],
+          res2: snapshot.data[index + 1][4],
+          res3: snapshot.data[index + 1][5],
+          author: snapshot.data[index + 1][6],
         );
       default:
         return TopicDetails(
