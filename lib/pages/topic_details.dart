@@ -51,6 +51,12 @@ class TopicDetails extends StatelessWidget {
         return [
           TextButton(
             onPressed: () {
+              sData.setFontStyle(TextStyle());
+            },
+            child: Text('Normal'),
+          ),
+          TextButton(
+            onPressed: () {
               sData.setFontStyle(GoogleFonts.atma());
             },
             child: Text('Atma'),
@@ -74,6 +80,7 @@ class TopicDetails extends StatelessWidget {
             child: Text('Sevillana'),
           ),
         ];
+        break;
       case 'Font Size':
         return [
           TextButton(
@@ -84,7 +91,7 @@ class TopicDetails extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              sData.setFontSize(20);
+              sData.setFontSize(21);
             },
             child: Text('Medium'),
           ),
@@ -93,6 +100,12 @@ class TopicDetails extends StatelessWidget {
               sData.setFontSize(24);
             },
             child: Text('Large'),
+          ),
+          TextButton(
+            onPressed: () {
+              sData.setFontSize(28);
+            },
+            child: Text('X-Large'),
           ),
         ];
         break;
@@ -106,7 +119,6 @@ class TopicDetails extends StatelessWidget {
     final mdq = MediaQuery.of(context).size;
     return Consumer<Settings>(
       builder: (context, data, _) {
-        data.fontSize = mdq.width > 800 ? 20 : 16;
         return Scaffold(
           appBar: AppBar(
             title: Text(unit != 0 ? 'Unit $unit' : 'Lab'),
@@ -164,7 +176,7 @@ class TopicDetails extends StatelessWidget {
                     //     ? InfiniteWidgets(data: body)
                     //     : CircularProgressIndicator.adaptive(),
                     Divider(),
-                    Text('Resources:'),
+                    if (res1 != null) Text('Resources:'),
                     if (res1 != null && res1.length > 0)
                       Link(
                         uri: Uri.parse(res1),

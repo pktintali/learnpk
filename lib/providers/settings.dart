@@ -1,11 +1,11 @@
 import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:pro_learning/utils/parser.dart';
 
 class Settings with ChangeNotifier {
   bool isDark = false;
-  TextStyle fontStyle = GoogleFonts.atma();
-  double fontSize = 16;
+  TextStyle fontStyle = TextStyle();
+  double fontSize = 18;
   List<String> elements = [];
   List<Widget> widgets = [];
   Parser p = new Parser();

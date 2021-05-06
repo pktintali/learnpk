@@ -47,15 +47,6 @@ class UnitDetails extends StatelessWidget {
                       ),
                       title: Text(snapshot.data[index + 1][0]),
                       onTap: () {
-                        // Provider.of<Settings>(context, listen: false)
-                        //     .elements
-                        //     .clear();
-                        // Provider.of<Settings>(context, listen: false)
-                        //     .widgets
-                        //     .clear();
-                        // Provider.of<Settings>(context, listen: false)
-                        //     .generateWidgets(snapshot.data[index + 1][2]);
-
                         Navigator.push(
                           context,
                           MaterialPageRoute(

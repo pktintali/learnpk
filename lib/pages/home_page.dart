@@ -22,7 +22,6 @@ class HomePage extends StatelessWidget {
                 // print(snapshot.data);
                 return GridView.builder(
                   itemCount: snapshot.data.length - 1,
-                  semanticChildCount: null,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: mdq.width > 800 ? 6 : 2,
                     mainAxisSpacing: 5,

@@ -19,8 +19,6 @@ class SubjectDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text('$subject'),
         centerTitle: true,
-        // backgroundColor:
-        //     MyColors.myColors[Random().nextInt(MyColors.myColors.length)],
       ),
       body: SafeArea(
         child: Container(
